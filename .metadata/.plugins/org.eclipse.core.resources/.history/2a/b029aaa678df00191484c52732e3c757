@@ -1,0 +1,25 @@
+package no.hvl.dat108;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Liste {
+    
+    private List<Vare> vare = new ArrayList<>();
+    
+    public Liste() {
+    	
+    }
+    
+    public void addVare(Vare vare) {
+        this.vare.add(vare);
+    }
+    
+    public void deleteVare(int index) {
+    	this.vare.remove(index);
+    }
+    
+    public List<Vare> getVare() {
+        return vare;
+    }
+}

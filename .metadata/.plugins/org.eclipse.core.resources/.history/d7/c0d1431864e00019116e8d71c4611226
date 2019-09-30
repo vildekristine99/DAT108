@@ -1,0 +1,21 @@
+package no.hvl.dat108;
+
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+public class Metoder {
+	
+	
+	private String escapeHtml(String s) {
+		String resultat = s;
+		resultat = resultat.replaceAll("<", "&lt;");
+		resultat = resultat.replaceAll(">", "&gt;");
+		resultat = resultat.replaceAll("\"", "&quot;");
+		resultat = resultat.replaceAll("\'", "&apos;");
+		return resultat;
+	}
+
+	
+	
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Login form</title>
+	<style type="text/css">
+		body{
+			background-color: lightpink;
+			font-family: "Arial", Arial, sans-serif;
+			color: #544B4F;
+		} 
+		form{
+			margin: 5px;
+			border-color: white;
+		}
+		legend{
+			margin: 2px;
+			border-color: white;
+			font-weight: bold;
+			color: #6A5F64;
+		}
+		fieldset {
+			border:1px solid white;
+		}
+		input[type=submit] {
+			background-color: white;
+			color: #544B4F;
+			cursor:pointer;
+			border-radius: 7px; 
+			font-size: 20px;
+			padding-left: 8px;
+			padding-right: 8px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+<form action="login" method="post">
+	<fieldset>
+		<legend>Login</legend>
+		<p>Username: <input type="text" name="username"></p>
+		<p>Password: <input type="password" name="password"></p>
+		<p><input type="submit" value="Login"></p>
+	</fieldset>
+</form>
+
+</body>
+</html>

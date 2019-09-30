@@ -1,0 +1,28 @@
+package no.hvl.dat108;
+
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+public class Metoder {
+	
+	public static void loggUt(HttpServletRequest req) {
+		HttpSession sesjon = req.getSession(false);
+		if(sesjon != null) {
+			sesjon.invalidate();
+		}
+	}
+	
+	public static void logginn(HttpServletRequest req, HttpSession sesjon) {
+		sesjon = request.getSession(false);
+		loggUt(request);
+    	sesjon = request.getSession(true);
+    	sesjon.setMaxInactiveInterval(tid);
+		sesjon.setAttribute("passord", true);
+		response.sendRedirect("liste");
+	}
+	
+
+	
+	
+}

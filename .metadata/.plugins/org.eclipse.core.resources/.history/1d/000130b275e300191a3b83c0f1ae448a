@@ -1,0 +1,9 @@
+package no.hvl.dat108;
+
+public class Validator {
+	private static final String PASSORD = "riktig";
+	
+	public boolean passordGyldig(String passord) {
+		return passord.equals(PASSORD);
+	}
+}

@@ -1,0 +1,23 @@
+INDEX VERSION 1.4+C:\Users\hsm20\OneDrive\Lenovo\Documents\HVL\DAT108\Eclipse-DAT108-web\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+82987044.index
+2960708829.index
+3539644028.index
+1146777780.index
+815839916.index
+1815614472.index
+138901178.index
+1815716246.index
+69988906.index
+3043780118.index
+1960786211.index
+3431269316.index
+1157902172.index
+1433302047.index
+3129772652.index
+1389644561.index
+634616711.index
+758479910.index
+2512150813.index
+778003144.index
+3917311826.index
+3374864622.index

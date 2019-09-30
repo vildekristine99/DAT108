@@ -1,0 +1,12 @@
+package no.hvl.dat108;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+public class Metoder {
+	public void loggUt(HttpSession sesjon) {
+		if(sesjon != null) {
+			sesjon.invalidate();
+		}
+	}
+}
