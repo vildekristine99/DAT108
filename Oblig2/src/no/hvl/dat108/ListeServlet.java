@@ -59,7 +59,7 @@ public class ListeServlet extends HttpServlet {
 			out.println("<form action=\""+LISTE_URL+"\" method=\"post\">");
 			out.println("<fieldset>");
 			out.println("<legend>Handleliste</legend>");
-			out.println("<p><input type=\"submit\" value=\"Legg til\"/> <input type=\"text\" name=\"vare\" /><br/></p>");
+			out.println("<p><input type=\"submit\" value=\"Legg til\"/> <input type=\"text\" name=\"vare\" autofocus /><br/></p>");
 			out.println("</fieldset>");
 			out.println("</form>");
 			out.println("<p> Din handleliste:<br />");
@@ -95,7 +95,7 @@ public class ListeServlet extends HttpServlet {
 				
 				if(vareInput != null) {
 					vareInput = StringEscapeUtils.escapeHtml(vareInput);
-					if(vareInput.matches("^\\S(.*)$")) {
+					if(vareInput.matches("^\\S(.*)$")) { //vareInput.trim().isEmpty() kan også brukes
 						synchronized(liste) {
 							Vare vare = new Vare(vareInput);
 							liste.addVare(vare);

@@ -1,7 +1,0 @@
-package no.hvl.dat108;
-
-public abstract class UrlMapping {
-	public static final String LISTE_URL = "webshop";
-    public static final String LOGIN_URL = "login";
-    public static final String LOGOUT_URL = "logout";
-}

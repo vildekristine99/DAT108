@@ -53,14 +53,14 @@ public class LoginServlet extends HttpServlet {
         out.println("<head>");
         out.println("<style type=\"text/css\">\r\n" + 
 				"		body{\r\n" + 
-				"			background-color: lightblue;\r\n" + 
+				"			background-color: lightgrey;\r\n" + 
 				"		} \r\n" + 
 				"		p {\r\n" + 
-				"			color: red;\r\n" + 
+				"			color: red;\r\n" +
 				"		}\r\n" + 
 				"		input[type=submit] {\r\n" + 
 				"			cursor:pointer;\r\n" + 
-				"			}\r\n" + 
+				"		}\r\n" + 
 				"	</style>");
         out.println("<meta charset=\"ISO-8859-1\">");
         out.println("<title>Login</title>");
@@ -69,9 +69,9 @@ public class LoginServlet extends HttpServlet {
         out.println("<form action=\"" + LOGIN_URL + "\" method=\"post\">");
         out.println("  <fieldset>");
         out.println("    <legend>Login</legend>");      
-        out.println(meld);
-        out.println("    <p><input type=\"password\" name=\"passord\"/></p>");
-        out.println("    <p><input type=\"submit\" value=\"Logg inn\" /></p>");
+        out.println(	 meld);
+        out.println("    <input type=\"password\" name=\"passord\"/></br></br>");
+        out.println("    <input type=\"submit\" value=\"Logg inn\" />");
         out.println("  </fieldset>");
         out.println("</form>");
         out.println("</body>");

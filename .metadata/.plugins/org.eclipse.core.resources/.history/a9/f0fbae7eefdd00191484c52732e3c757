@@ -1,5 +1,0 @@
-package no.hvl.dat108;
-
-public abstract class UrlMapping {
-    public static final String LOGIN_URL = "login";
-}
