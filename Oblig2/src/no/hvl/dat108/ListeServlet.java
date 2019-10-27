@@ -4,8 +4,10 @@ package no.hvl.dat108;
 //import static no.hvl.dat108.UrlMapping.LISTE_URL;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +24,7 @@ public class ListeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Liste liste;
 	
-	 @Override
+	@Override
 	public void init() throws ServletException {
     	liste = new Liste();
     }
@@ -97,7 +99,8 @@ public class ListeServlet extends HttpServlet {
 					vareInput = StringEscapeUtils.escapeHtml(vareInput);
 					if(vareInput.matches("^\\S(.*)$")) { //vareInput.trim().isEmpty() kan også brukes
 						synchronized(liste) {
-							Vare vare = new Vare(vareInput);
+							Vare vare = new Vare();
+							vare.setName("vareInput");
 							liste.addVare(vare);
 						}
 					}

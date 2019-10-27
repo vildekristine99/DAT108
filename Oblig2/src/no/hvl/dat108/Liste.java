@@ -1,29 +1,43 @@
 package no.hvl.dat108;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
+import javax.persistence.*;
+
+@Entity
+@Table(schema = "handleliste", name = "handleliste")
 public class Liste {
-    
-    private List<Vare> vare = new ArrayList<>();
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int num;
+    private List<Vare> handleliste = new ArrayList<>();
     
     public Liste() {
     	
     }
+
+    public Vare getVare(int index) {
+        return handleliste.get(index);
+    }
     
     public void addVare(Vare vare) {
-        this.vare.add(vare);
+        this.handleliste.add(vare);
     }
     
     public void deleteVare(int index) {
-    	this.vare.remove(index);
+    	this.handleliste.remove(index);
     }
     
     public List<Vare> getListe() {
-        return vare;
+        return handleliste;
     }
 	
 	public int indexOf(Vare v) {
-		return vare.indexOf(v);
+		return handleliste.indexOf(v);
 	}
+	
+	
 }
