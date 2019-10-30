@@ -15,16 +15,19 @@ public class InnloggingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@EJB
-	DeltagerEAO deltagerEAO;
+	private DeltagerEAO deltagerEAO;
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
-		
+			throws ServletException, IOException {		
+		String feilmelding = "Du må logge inn for å få tilgang";
 		String feilkode = request.getParameter("feilkode");
-		
+		if(feilkode != null) {
+			if(feilkode.equals("1")) {
+				request.getSession().setAttribute("feilmelding", feilmelding);
+			}
+		}
         request.getRequestDispatcher("WEB-INF/innlogging.jsp").forward(request, response);
-        
 	}
 
 	@Override
@@ -37,7 +40,6 @@ public class InnloggingServlet extends HttpServlet {
 		
 		String feilmelding = "Ugyldig brukernavn og/eller passord";
 		if(d == null) {		//bruker eksisterer ikke
-			//feilkode
 			request.getSession().setAttribute("feilmelding", feilmelding);
 			response.sendRedirect("loggInn");
 		} else {

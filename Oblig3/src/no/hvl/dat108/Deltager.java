@@ -32,12 +32,15 @@ public class Deltager {
 	public String getMobil() {
 		return mobil;
 	}
+	
 	public void setMobil(String mobil) {
 		this.mobil = mobil;
 	}
+	
 	public String getPassordhash() {
 		return passordhash;
 	}
+	
 	public void setPassordhash(String passordhash) {
 		this.passordhash = passordhash;
 	}
@@ -53,18 +56,23 @@ public class Deltager {
 	public String getFornavn() {
 		return fornavn;
 	}
+	
 	public void setFornavn(String fornavn) {
 		this.fornavn = fornavn;
 	}
+	
 	public String getEtternavn() {
 		return etternavn;
 	}
+	
 	public void setEtternavn(String etternavn) {
 		this.etternavn = etternavn;
 	}
+	
 	public char getKjonn() {
 		return kjonn;
 	}
+	
 	public void setKjonn(char kjonn) {
 		this.kjonn = kjonn;
 	}

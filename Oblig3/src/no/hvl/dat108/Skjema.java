@@ -64,26 +64,26 @@ public class Skjema {
 		}
 	}
 
-	private static boolean passordGyldig(String passord1, String passord2) {
+	public static boolean passordGyldig(String passord1, String passord2) {
 		return passord1.equals(passord2)
 				&& !passord1.isEmpty() && passord1 != null
 						&& passord1.length() > 7;
 	}
 	 
 	
-	private static boolean mobilGyldig(String mobil) {
+	public static boolean mobilGyldig(String mobil) {
 		return mobil.matches("^[0-9]{8}$") && !mobil.isEmpty() && mobil != null;
 	}
 	
-	private static boolean fornavnGyldig(String fornavn) {
+	public static boolean fornavnGyldig(String fornavn) {
 		return fornavn.matches("^[A-ZÆØÅ][a-zæøåA-ZÆØÅ -]{2,20}$") && !fornavn.isEmpty() && fornavn != null;
 	}
 	
-	private static boolean etternavnGyldig(String etternavn) {
+	public static boolean etternavnGyldig(String etternavn) {
 		return etternavn.matches("^[A-ZÆØÅ][a-zæøåA-ZÆØÅ-]{2,20}$") && !etternavn.isEmpty() && etternavn != null;
 	}
 	
-	private static boolean kjonnGyldig(char kjonn) {
+	public static boolean kjonnGyldig(char kjonn) {
 		return (kjonn == 'K' || kjonn == 'M');
 	}
 	

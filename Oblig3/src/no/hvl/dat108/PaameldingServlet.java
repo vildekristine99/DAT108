@@ -15,7 +15,7 @@ public class PaameldingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@EJB
-	DeltagerEAO deltagerEAO;
+	private DeltagerEAO deltagerEAO;
        
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 

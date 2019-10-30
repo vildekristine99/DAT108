@@ -10,10 +10,17 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/utlogget")
 public class UtloggetServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+    
 	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {	
+		doPost(request, response);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		Metoder.loggUt(request);		
-		request.getRequestDispatcher("WEB-INF/ferdig.html").forward(request, response);
+		response.sendRedirect("ferdig");
 	}
 }
