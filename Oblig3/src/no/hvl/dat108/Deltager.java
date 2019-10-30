@@ -5,15 +5,19 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema = "oblig3_2019", name = "deltager")
+@Table(schema = "oblig3_2019", name = "Deltager")
 public class Deltager {
 	@Id
-	String mobil;
-	String passordhash;
-	String passordsalt;
-	String fornavn;
-	String etternavn;
-	char kjonn;
+	private String mobil;
+	private String passordhash;
+	private String passordsalt;
+	private String fornavn;
+	private String etternavn;
+	private char kjonn;
+	
+	public Deltager() {
+		
+	}
 	
 	public Deltager(String mobil, String passordhash, String passordsalt, String fornavn, String etternavn,
 			char kjonn) {

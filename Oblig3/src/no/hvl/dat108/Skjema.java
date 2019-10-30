@@ -1,7 +1,5 @@
 package no.hvl.dat108;
 
-import javax.servlet.http.HttpServletRequest;
-
 public class Skjema {
 	private String fornavnError;
 	private String etternavnError;
@@ -18,20 +16,15 @@ public class Skjema {
 	private char kjonn;
 	
 	
-	Skjema(HttpServletRequest request){
-		mobil = request.getParameter("mobil");
-		passord = request.getParameter("passord"); 
-		fornavn = request.getParameter("fornavn");
-		etternavn = request.getParameter("etternavn"); 
-		kjonn = request.getParameter("kjonn").charAt(0);
-		passordRepetert = request.getParameter("passordRepetert");
-		
+	Skjema(String mobil, String passord, String passordRepetert, String fornavn, String etternavn, char kjonn){
+		this.mobil = mobil;
+		this.passord = passord; 
+		this.fornavn = fornavn;
+		this.etternavn = etternavn;
+		this.kjonn = kjonn;
+		this.passordRepetert = passordRepetert;
 	}
 	
-	public Deltager nyDeltager() {
-		return new Deltager(mobil, passord, passordRepetert, fornavn, etternavn, kjonn);
-	}
-
 	public boolean erGyldig() {
 		return passordGyldig(passord, passordRepetert)
 				&& mobilGyldig(mobil)
