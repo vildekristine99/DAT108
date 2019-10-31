@@ -55,8 +55,7 @@ public class InnloggingServlet extends HttpServlet {
 				likt = hash.validatePasswordWithSalt(passord, passordSalt, passordHash);
 			} catch (NoSuchAlgorithmException e) {
 				e.printStackTrace();
-			}
-			
+			}	
 			
 			if(likt) {
 				Metoder.loggInn(request, mobil, d.getFornavn(), d.getEtternavn(), d.getKjonn());

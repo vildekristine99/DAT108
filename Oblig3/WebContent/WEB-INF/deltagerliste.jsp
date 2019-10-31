@@ -24,10 +24,10 @@
 			<c:choose>
 				<c:when test="${d.mobil eq mobil}">  
 					<tr bgcolor="#aaffaa">
-						<c:set var="kjonn" value="${deltager.kjonn}"/>
+						<c:set var="kjonn" value="${d.kjonn}"/>
 						<c:choose>
 							<c:when test="${kjonn eq 'M'.charAt(0)}">
-								<td align="center"><font color="#071ff7">&#9792;</font></td>
+								<td align="center"><font color="#071ff7">&#9794;</font></td>
 							</c:when>
 							<c:otherwise>
 								<td align="center"><font color="#f24bef">&#9792;</font></td>
@@ -39,10 +39,10 @@
 				</c:when>
 				<c:otherwise>
 					<tr bgcolor="#ffffff">
-						<c:set var="kjonn" value="${deltager.kjonn}"/>
+						<c:set var="kjonn" value="${d.kjonn}"/>
 						<c:choose>
 							<c:when test="${kjonn eq 'M'.charAt(0)}">
-								<td align="center"><font color="#071ff7">&#9792;</font></td>
+								<td align="center"><font color="#071ff7">&#9794;</font></td>
 							</c:when>
 							<c:otherwise>
 								<td align="center"><font color="#f24bef">&#9792;</font></td>
